@@ -2,43 +2,59 @@
 <html>
     <head>
         <title>Contact Us</title>
+        <link href="restaurantStyles.css" type="text/css" rel="stylesheet">
+        <style>
+            .req-label {
+                font-weight: bold;
+            }
+            section {
+                background-color: #F4F1BB;
+                text-align:center;
+            }
+        </style>
     </head>
     <body>
-        <header>
-            <h1 style="text-align: center;">Aaron's Taste</h1>
+        <header class="hder-fter">
+            <h1>Aaron's Taste</h1>
             <hr/>
         </header>
 
         <nav>
-            <a href = "index.html"><p style="float: left; margin: 5px;">Home</p></a>
-            <a href = "menu.html"><p style="float: left; margin: 5px;">Menu</p></a>
-            <a href = "contact.html"><p style="float: left; margin: 5px;">Contact Us</p></a><br/><br/>
+            <a href = "index.html"><p class="nav-link">Home</p></a>
+            <a href = "menu.html"><p class="nav-link">Menu</p></a>
+            <a href = "contact.html"><p class="nav-link">Contact Us</p></a>
+            <div class="clear-float"></div>
             <hr/>
         </nav>
-        <section style="text-align: center;">
+        <section>
             <form action="submit.html" method="POST">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name">
+                <label class="req-label" for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <br/>
                 <br/>
 
-                <label for="email">Email:</label>
-                <input type="text" id="email" name="email">
+                <label class="req-label" for="email">Email:</label>
+                <input type="text" id="email" name="email" required>
+                <br/>
                 <br/>
 
                 <label for="phone">Phone:</label>
                 <input type="text" id="phone" name="phone">
                 <br/>
+                <br/>
                     <label for="inquiry">Reason for Inquiry:</label>
-                    <select id="inquiry" name="inquiry">
+                    <select id="inquiry" name="inquiry" required>
                         <option value="default" selected>Catering</option>
                         <option value="private-party">Private Party</option>
                         <option value="feedback">Feedback</option>
                         <option value="other">Other</option>
                     </select>
                 <br/>
+                <br/>
 
-                <label for="info">Additional Information:</label>
-                <textarea id="info" name="info"></textarea>
+                <label class="req-label" for="info">Additional Information:</label>
+                <textarea id="info" name="info" required></textarea>
+                <br/>
                 <br/>
 
                     <label>Have you been to the restaurant?</label>
@@ -47,6 +63,7 @@
                     <input type="radio" id="choice2" name="questionnaire" value="no">
                     <label for="questionnaire">No</label>
 
+                <br/>
                 <br/>
                 
                     <label>Best days to contact you: </label>
@@ -63,14 +80,16 @@
                 
 
                 <br/>
+                <br/>
 
                 <input type="submit" id="submit" name="sumit" value="Send Request">
 
-                <hr/>
+                
             </form>
         </section>
 
-        <footer style="text-align: center;">
+        <footer class="hder-fter">
+            <hr/>
             <p>2303 Bell Street, New York, NY, 10014</p>
             <p>917-346-6564</p>
         </footer>

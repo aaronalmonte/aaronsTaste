@@ -2,17 +2,24 @@
 <html>
     <head>
         <title>Aaron's Taste Restaurant</title>
+        <link href="restaurantStyles.css" type="text/css" rel="stylesheet">
+        <style>
+            section {
+                background-color: #F4F1BB;
+            }
+        </style>
     </head>
     <body>
-        <header>
-            <h1 style="text-align: center;">Aaron's Taste</h1>
+        <header class="hder-fter">
+            <h1>Aaron's Taste</h1>
             <hr/>
         </header>
 
         <nav>
-            <a href = "index.html"><p style="float: left; margin: 5px;">Home</p></a>
-            <a href = "menu.html"><p style="float: left; margin: 5px;">Menu</p></a>
-            <a href = "contact.html"><p style="float: left; margin: 5px;">Contact Us</p></a><br/><br/>
+            <a href = "index.html"><p class="nav-link">Home</p></a>
+            <a href = "menu.html"><p class="nav-link">Menu</p></a>
+            <a href = "contact.html"><p class="nav-link">Contact Us</p></a>
+            <div class="clear-float"></div>
             <hr/>
         </nav>
         
@@ -20,8 +27,11 @@
         <section style=" text-align: center; ">
             
             <img src="images/aaronsTaste.jpg">
-            <p style="margin: 0;">Restaurant Description</p>
-            <p style=" margin: 0; display: inline-block; width:400px; text-align: left;">
+            <br/>
+            <p style="margin:0; width: 400px; display:inline-block; text-align: left;">Restaurant Description</p>
+            <br/>
+            
+            <p style=" margin: 0; width: 400px; display: inline-block; text-align: left;">
                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris malesuada urna mi, 
                eget facilisis mi accumsan sit amet. Duis sit amet nibh augue. Suspendisse dictum a 
                massa eget luctus. Cras tempor pulvinar risus vitae fringilla. Fusce congue sed erat 
@@ -34,10 +44,11 @@
             </p>
             <br/><br/>
             <br/><br/>
-            <hr/>
+            
         </section>
 
-        <footer style="text-align: center;">
+        <footer class="hder-fter">
+            <hr/>
             <p>2303 Bell Street, New York, NY, 10014</p>
             <p>917-346-6564</p>
         </footer>

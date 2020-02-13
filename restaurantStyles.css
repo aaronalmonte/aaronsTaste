@@ -1,0 +1,48 @@
+.hder-fter {
+    text-align: center;
+    background-color: #5CA4A9;
+    color: #E6EBE0/*rgb(100, 36, 25); */
+}
+
+h1 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* .nav-link {
+
+    color: green;
+} */
+nav {
+    background-color: #9BC1BC;
+}
+nav a {
+    float: left; 
+    margin: 5px;
+    text-decoration: none;
+}
+
+nav a:visited {
+    color: #E6EBE0;
+}
+
+nav a:hover {
+    font-weight: bold;
+}
+
+nav a:active {
+    text-decoration: none;
+    color:#ED6A5A;
+}
+
+.clear-float{
+    clear: both;
+}
+
+hr {
+    margin: 0;
+}
+
+
+
+
+
