@@ -16,7 +16,7 @@ nav {
     background-color: #9BC1BC;
 }
 nav a {
-    float: left; 
+    /* float: left; */
     margin: 5px;
     text-decoration: none;
 }
