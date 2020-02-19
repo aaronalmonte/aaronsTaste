@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>Contact Us</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link href="restaurantStyles.css" type="text/css" rel="stylesheet">
         <style>
@@ -14,79 +15,131 @@
             }
         </style>
     </head>
-    <body>
+    <body class="container-fluid">
+        <noscript>
+            This site is best viewed with JavaScript enabled. 
+            Please enable javascript and come back to our wesite for a better experience.
+        </noscript>
         <header class="hder-fter">
             <h1>Aaron's Taste</h1>
             <hr/>
         </header>
 
         <nav class="nav nav-tabs">
-            <a class="nav-item nav-link" href = "index.html"><p>Home</p></a>
-            <a class="nav-item nav-link" href = "menu.html"><p>Menu</p></a>
-            <a class="nav-item nav-link" href = "contact.html"><p>Contact Us</p></a>
+            <a class="nav-item nav-link" href = "index.html"><p>
+                <i class="material-icons">
+                    home
+                </i>  
+                </p></a>
+            <a class="nav-item nav-link" href = "menu.html"><p>
+                <i class="material-icons">
+                    restaurant_menu
+                </i>
+            </p></a>
+            <a class="nav-item nav-link" href = "contact.html"><p>
+                <i class="material-icons">
+                    contact_support
+                </i>
+            </p></a>
             <div></div>
             <hr/>
         </nav>
+        
         <section>
-            <form action="submit.html" method="POST">
-                <label class="req-label" for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <br/>
-                <br/>
+            <br/>
+            <form onsubmit="return validateForm()">
+                <div class="form-group row justify-content-center">
+                    <label class="req-label col-lg-3 col-form-label" style="text-align: right;" for="name">Name:</label>
+                    <div class="col-lg-4">
+                        <input class="form-control" type="text" id="name" name="name" placeholder="format: Firstname Lastname">
+                    </div>
+                </div>
+               
 
-                <label class="req-label" for="email">Email:</label>
-                <input type="text" id="email" name="email" required>
-                <br/>
-                <br/>
 
-                <label for="phone">Phone:</label>
-                <input type="text" id="phone" name="phone">
-                <br/>
-                <br/>
-                    <label for="inquiry">Reason for Inquiry:</label>
-                    <select id="inquiry" name="inquiry" required>
-                        <option value="default" selected>Catering</option>
-                        <option value="private-party">Private Party</option>
-                        <option value="feedback">Feedback</option>
-                        <option value="other">Other</option>
-                    </select>
-                <br/>
-                <br/>
+                <div class="form-group row justify-content-center">
+                    <label class="req-label col-lg-3 col-form-label" style="text-align: right;" for="email">Email:</label>
+                    <div class="col-lg-4">
+                        <input class="form-control" type="text" id="email" name="email" placeholder="format: email@domain.com">
+                    </div>
+                </div>
 
-                <label class="req-label" for="info">Additional Information:</label>
-                <textarea id="info" name="info" required></textarea>
-                <br/>
-                <br/>
 
-                    <label>Have you been to the restaurant?</label>
-                    <input type="radio" id="choice1" name="questionnaire" value="yes">
-                    <label for="questionnaire">Yes</label>
-                    <input type="radio" id="choice2" name="questionnaire" value="no">
-                    <label for="questionnaire">No</label>
+                <div class="form-group row justify-content-center">
+                    <label class="col-lg-3 col-form-label" style="text-align: right;" for="phone">Phone:</label>
+                    <div class="col-lg-4">
+                        <input class="form-control" type="text" id="phone" name="phone" placeholder="format: 5550004444">
+                    </div>
+                </div>
 
-                <br/>
-                <br/>
+
+                <div class="form-group row justify-content-center">
+                    <label class="col-lg-3 col-form-label" style="text-align: right;" for="inquiry">Reason for Inquiry:</label>
+                    <div class="col-lg-4">
+                        <select class="form-control" id="inquiry" name="inquiry" required>
+                            <option value="default" selected>Catering</option>
+                            <option value="private-party">Private Party</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <div class="form-group row justify-content-center">
+                    <label class="req-label col-lg-3 col-form-label" style="text-align: right;" for="info">Additional Information:</label>
+                    <div class="col-lg-4">
+                        <textarea class="form-control" id="info" name="info" placeholder="Enter comments here."></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group row justify-content-center">
+                    <label class="col-lg-3 col-form-label" style="text-align: right;">Have you been to the restaurant?</label>
+                    <div class="col-lg-4" style="text-align: left;"> 
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" id="choice1" name="questionnaire" value="yes">
+                                <label class="form-check-label" for="questionnaire">Yes</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" id="choice2" name="questionnaire" value="no">
+                                <label class="form-check-label" for="questionnaire">No</label>
+                            </div>
+                    </div>
+                </div>
+
+
                 
-                    <label>Best days to contact you: </label>
-                    <input type="checkbox" id="monday" name="contact-day" value="monday">
-                    <label for="monday">M</label>
-                    <input type="checkbox" id="tuesday" name="contact-day" value="tuesday">
-                    <label for="tuesday">T</label>
-                    <input type="checkbox" id="wednesday" name="contact-day" value="wednesday">
-                    <label for="wednesday">W</label>
-                    <input type="checkbox" id="thursday" name="contact-day" value="thursday">
-                    <label for="thursday">Th</label>
-                    <input type="checkbox" id="friday" name="contact-day" value="friday">
-                    <label for="friday">F</label>
-                
+                <div class="form-group row justify-content-center">
+                    <label class="col-lg-3 col-form-label" style="text-align: right;">Best days to contact you: </label>
+                    <div class="col-lg-4" style="text-align: left;">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="monday" name="contact-day" value="monday">
+                            <label class="form-check-label" for="monday">M</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="tuesday" name="contact-day" value="tuesday">
+                            <label class="form-check-label" for="tuesday">T</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="wednesday" name="contact-day" value="wednesday">
+                            <label class="form-check-label" for="wednesday">W</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="thursday" name="contact-day" value="thursday">
+                            <label class="form-check-label" for="thursday">Th</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="friday" name="contact-day" value="friday">
+                            <label class="form-check-label" for="friday">F</label>
+                        </div>
+                    </div>
+                </div>
 
-                <br/>
-                <br/>
-
-                <input type="submit" id="submit" name="sumit" value="Send Request">
-
-                
+                <div>
+                    <input class="btn btn-primary" type="submit" id="submit" name="submit" value="Send Request">
+                </div>
             </form>
+            <br/>
         </section>
 
         <footer class="hder-fter">
@@ -95,9 +148,14 @@
             <p>917-346-6564</p>
         </footer>
 
-
+        <script type="text/javascript" src="scripts/contact.js" onsubmit="return validateForm()"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+        <noscript>
+            This site is best viewed with JavaScript enabled. 
+            Please enable javascript and come back to our wesite for a better experience.
+        </noscript>
     </body>
 </html>

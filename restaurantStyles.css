@@ -42,6 +42,9 @@ hr {
     margin: 0;
 }
 
+noscript {
+    background-color: yellow;
+}
 
 
 
